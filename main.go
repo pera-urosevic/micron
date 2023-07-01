@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"dreamsleep.cloud/micron/admin"
 	"dreamsleep.cloud/micron/storage"
 	"dreamsleep.cloud/micron/system"
 	"dreamsleep.cloud/micron/ticker"
@@ -10,6 +11,7 @@ import (
 
 func main() {
 	system.Log("MiCron starting")
+	system.Log("Commands: [P]ause, [E]dit, [Q]uit")
 
 	err := storage.ConfigLoad()
 	if err != nil {
@@ -17,6 +19,7 @@ func main() {
 		return
 	}
 
-	ticker.Start()
+	go ticker.Start()
+	admin.Start()
 	system.Log("MiCron ended")
 }

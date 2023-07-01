@@ -1,6 +1,7 @@
 package types
 
 type Config struct {
+	Editor  string    `json:"editor"`
 	Startup []Startup `json:"startup"`
 	Monitor []Monitor `json:"monitor"`
 	Daily   []Daily   `json:"daily"`

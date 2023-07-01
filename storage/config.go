@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	"dreamsleep.cloud/micron/execute"
 	"dreamsleep.cloud/micron/system"
 	"dreamsleep.cloud/micron/types"
 )
@@ -66,4 +67,18 @@ func ConfigSave() error {
 
 	Config.Changed = false
 	return nil
+}
+
+func ConfigEdit() error {
+	path, err := configPath()
+	if err != nil {
+		return err
+	}
+
+	_, err = execute.WithOutput(Config.Editor, []string{path})
+	if err != nil {
+		return err
+	}
+
+	return ConfigLoad()
 }

@@ -7,6 +7,8 @@ import (
 	"dreamsleep.cloud/micron/storage"
 )
 
+var Running bool = true
+
 func Start() {
 	runner.Startup(&storage.Config)
 	storage.ConfigSave()
@@ -18,10 +20,12 @@ func Start() {
 		for {
 			select {
 			case <-ticker.C:
-				runner.Monitor(&storage.Config)
-				runner.Daily(&storage.Config)
-				runner.Weekly(&storage.Config)
-				storage.ConfigSave()
+				if Running {
+					runner.Monitor(&storage.Config)
+					runner.Daily(&storage.Config)
+					runner.Weekly(&storage.Config)
+					storage.ConfigSave()
+				}
 			case <-quit:
 				ticker.Stop()
 				return
