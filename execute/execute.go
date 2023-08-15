@@ -27,7 +27,8 @@ func WithDetach(name string, cmd string, args ...string) {
 			system.Log("Error executing with detach", err)
 		} else {
 			app.Process.Release()
-			system.Log("Execute |", name)
+			cmdline := cmd + " " + strings.Join(args, " ")
+			system.Log("Execute |", cmdline)
 		}
 	})
 }
