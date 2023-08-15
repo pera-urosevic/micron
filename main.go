@@ -10,7 +10,8 @@ import (
 )
 
 func main() {
-	system.Log("MiCron starting")
+	system.Log("MiCron")
+
 	system.Log("Commands: [P]ause, [E]dit, [Q]uit")
 
 	err := storage.ConfigLoad()

@@ -20,6 +20,24 @@ func configPath() (string, error) {
 	return fmt.Sprintf("%s\\micron.json", dirname), nil
 }
 
+func printConfig(config *types.Config) {
+	for _, item := range Config.Startup {
+		system.Log("Startup:", item.Name)
+	}
+
+	for _, item := range Config.Monitor {
+		system.Log("Monitor:", item.Name)
+	}
+
+	for _, item := range Config.Daily {
+		system.Log("Daily:", item.Name)
+	}
+
+	for _, item := range Config.Weekly {
+		system.Log("Weekly:", item.Name)
+	}
+}
+
 func ConfigLoad() error {
 	path, err := configPath()
 	if err != nil {
@@ -36,10 +54,7 @@ func ConfigLoad() error {
 		return err
 	}
 
-	system.Log("Startup:", len(Config.Startup))
-	system.Log("Monitor:", len(Config.Monitor))
-	system.Log("Daily:", len(Config.Daily))
-	system.Log("Weekly:", len(Config.Weekly))
+	printConfig(&Config)
 
 	Config.Changed = false
 	return nil
