@@ -3,10 +3,10 @@ package runner
 import (
 	"time"
 
-	"dreamsleep.cloud/micron/check"
-	"dreamsleep.cloud/micron/execute"
-	"dreamsleep.cloud/micron/system"
-	"dreamsleep.cloud/micron/types"
+	"micron/check"
+	"micron/execute"
+	"micron/system"
+	"micron/types"
 )
 
 func Daily(config *types.Config) {

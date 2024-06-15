@@ -3,8 +3,8 @@ package ticker
 import (
 	"time"
 
-	"dreamsleep.cloud/micron/runner"
-	"dreamsleep.cloud/micron/storage"
+	"micron/runner"
+	"micron/storage"
 )
 
 var Running bool = true

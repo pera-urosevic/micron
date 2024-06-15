@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"dreamsleep.cloud/micron/system"
+	"micron/system"
 )
 
 func WeekDayTime(weekDay string, dayTime string, lastRun string) bool {

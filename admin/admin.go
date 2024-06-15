@@ -4,9 +4,9 @@ import (
 	"bufio"
 	"os"
 
-	"dreamsleep.cloud/micron/storage"
-	"dreamsleep.cloud/micron/system"
-	"dreamsleep.cloud/micron/ticker"
+	"micron/storage"
+	"micron/system"
+	"micron/ticker"
 )
 
 func Start() {

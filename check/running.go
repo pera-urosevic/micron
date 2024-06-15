@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"dreamsleep.cloud/micron/execute"
+	"micron/execute"
 )
 
 func Running(cmd string) bool {

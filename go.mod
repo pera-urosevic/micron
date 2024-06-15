@@ -1,3 +1,3 @@
-module dreamsleep.cloud/micron
+module micron
 
 go 1.20

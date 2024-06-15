@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
-	"dreamsleep.cloud/micron/admin"
-	"dreamsleep.cloud/micron/storage"
-	"dreamsleep.cloud/micron/system"
-	"dreamsleep.cloud/micron/ticker"
+	"micron/admin"
+	"micron/storage"
+	"micron/system"
+	"micron/ticker"
 )
 
 func main() {

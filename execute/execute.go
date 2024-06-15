@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"dreamsleep.cloud/micron/system"
+	"micron/system"
 )
 
 func GetExe(cmd string) string {

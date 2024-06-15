@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"dreamsleep.cloud/micron/execute"
-	"dreamsleep.cloud/micron/system"
-	"dreamsleep.cloud/micron/types"
+	"micron/execute"
+	"micron/system"
+	"micron/types"
 )
 
 var Config types.Config
