@@ -20,7 +20,7 @@ func configPath() (string, error) {
 	return fmt.Sprintf("%s\\micron.json", dirname), nil
 }
 
-func printConfig(config *types.Config) {
+func PrintConfig() {
 	for _, item := range Config.Startup {
 		system.Log("Startup:", item.Name)
 	}
@@ -53,8 +53,6 @@ func ConfigLoad() error {
 	if err != nil {
 		return err
 	}
-
-	printConfig(&Config)
 
 	Config.Changed = false
 	return nil
